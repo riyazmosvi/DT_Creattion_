@@ -113,9 +113,7 @@ if st.button("🚀 Generate Excel"):
     ws5.append(["CONSUMERCODE", "DT_CODE", "FEEDER_CODE", "DT_NAME", "SP_ID", "QUERY"])
     for i, r in enumerate(data.itertuples(index=False), start=2):
         formula = (
-            f'="update ci_sp set fac_lvl_1_cd = " & C{i} '
-            f'& " , fac_lvl_2_cd= " & B{i} '
-            f'& " where sp_id = " & E{i} & " ;"'
+            f'="update ci_sp set fac_lvl_1_cd = \'" & C{i} & "\', fac_lvl_2_cd= \'" & B{i} & "\' where sp_id = \'" & E{i} & "\' ;"'
         )
         ws5.append([
             r.CONSUMERCODE,
