@@ -5,7 +5,7 @@ from io import BytesIO
 from openpyxl import Workbook
 
 st.set_page_config(page_title="DT Creation Tool", layout="wide")
-st.title("🔌 DT Creation Tool – Final Fix v5.3 – DT & Feeder Forward-Fill")
+st.title("🔌 DT Creation Tool")
 
 # Normalize DT name
 def normalize(dt):
