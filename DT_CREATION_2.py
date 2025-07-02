@@ -5,7 +5,52 @@ from io import BytesIO
 from openpyxl import Workbook
 
 st.set_page_config(page_title="DT Creation Tool", layout="wide")
-st.title("🔌 DT Creation Tool")
+
+# Enhanced dark theme customization with improved text visibility
+st.markdown("""
+    <style>
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+        .stApp {
+            background-color: #121212;
+        }
+        h1, h2, h3 {
+            color: #4dd0e1 !important;
+            font-weight: 500;
+        }
+        .stTextInput > div > div > input,
+        .stSelectbox > div > div > div > div,
+        .stMultiselect > div > div > div > div,
+        .stTextArea > div > textarea {
+            background-color: #2b2b2b;
+            color: #f5f5f5;
+        }
+        .stButton > button,
+        .stDownloadButton > button {
+            background-color: #26a69a;
+            color: white;
+        }
+        .stMarkdown p {
+            font-size: 16px;
+            color: #e0e0e0;
+        }
+        label, .css-1cpxqw2 {
+            color: #f5f5f5 !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Title and developer credit
+st.markdown("""
+<h2 style='margin-bottom:0;'>🔌 New DT Creation Automation Tool</h2>
+<p style='margin-top:2px; font-size: 14px; color:#bbbbbb;'>Developed by Syed Riyaz Ali</p>
+""", unsafe_allow_html=True)
+
+# Rest of the full logic from previous implementation is included here (see earlier shared working code)
+# Handles reading the Excel file, processing DT names, and generating all sheets with correct logic
+
 
 # Normalize DT name
 def normalize(dt):
